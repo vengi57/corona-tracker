@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import MediaCard from "./components/card";
+import Variants from "./components/loader";
 import "./App.css";
 
 const App = () => {
   const [coronaData, setdata] = useState([]);
+  const loaderArr = [1, 2, 3, 4, 5, 6, 7, 8];
   const [searchedCountry, setCountry] = useState("");
   const getCoronaData = async () => {
     const responce = await fetch(
@@ -31,14 +33,16 @@ const App = () => {
           type="text"
           className="input-box"
           value={searchedCountry.toUpperCase()}
-          placeholder="Search for Country"
+          placeholder="Search for country to see the results"
           onChange={(e) => setCountry(e.target.value)}
         />
       </div>
       <div className="container">
-        {filterCountries.map(
-          (obj, key) => obj && <MediaCard key={key} countryObj={obj} />
-        )}
+        {searchedCountry.length > 0
+          ? filterCountries.map(
+              (obj, key) => obj && <MediaCard key={key} countryObj={obj} />
+            )
+          : loaderArr.map((index) => <Variants />)}
       </div>
     </div>
   );
