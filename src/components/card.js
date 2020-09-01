@@ -4,7 +4,7 @@ import "./card.css";
 
 const MediaCard = (props) => {
   const convertNumerals=(num)=>{
-    return numeral(num).format("0a").toString().toUpperCase();
+    return numeral(num).format("0.00a").toString().toUpperCase();
   }
   return (
     <div className="sub-container">
