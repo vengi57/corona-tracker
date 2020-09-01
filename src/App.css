@@ -1,0 +1,37 @@
+.root{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.search-box{
+    display: flex;
+    padding-top: 20px;
+    height: 30px;
+    font-family: monospace;
+    justify-content: center;
+}
+/* ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+:-moz-placeholder {
+    text-align: left;
+} */
+.input-box{
+    border-radius: 8px;
+    width: 20%;
+    /* border: none; */
+    padding: 10px;;
+}
+.container {
+    font-family: fantasy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title{
+    display: flex;
+    padding-top: 20px;
+    font-size: 35px;
+    font-family: monospace;
+    justify-content: center;
+}
