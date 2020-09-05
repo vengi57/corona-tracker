@@ -75,7 +75,7 @@ const App = () => {
           &#8226; Clean your hands often. Use soap and water, or an
           alcohol-based hand rub
           <br />
-          &#8226;Maintain a safe distance from anyone who is coughing or
+          &#8226; Maintain a safe distance from anyone who is coughing or
           sneezing
           <br />
           &#8226; Don’t touch your eyes, nose or mouth.
