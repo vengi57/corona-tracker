@@ -5,7 +5,7 @@ API Documentation
 JavaScript Framework:
 	React-JS with Hooks
 Deployment:
-	[I'm an inline-style link](https://www.netlify.com/)
+	[Netlify](https://www.netlify.com/)
 Demo:
-	[I'm an inline-style link](https://corona-live-tracker-world.netlify.app/)
+	[Demo Link](https://corona-live-tracker-world.netlify.app/)
 
