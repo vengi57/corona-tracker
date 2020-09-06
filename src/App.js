@@ -42,12 +42,12 @@ const App = () => {
     <div className="root">
       <div className="title">
         {" "}
-        <img src="/images/image4.png" className="title-image"></img>Covid
+        <img src="/images/image4.png" className="title-image" alt=""></img>Covid
         Tracker Live
       </div>
       <div className="info-cards">
-        <img src="/images/image1.png" className="info-image"></img>
-        <div className="info-content">
+        <img src="/images/image1.png" className="info-image" alt=""></img>
+        <div className="info-content" style={{textIndent: '45px'}}>
           Coronavirus disease (COVID-19) is an infectious disease caused by a
           newly discovered coronavirus.Most people who fall sick with COVID-19
           will experience mild to moderate symptoms and recover without special
@@ -55,20 +55,19 @@ const App = () => {
         </div>
       </div>
       <div className="info-cards">
-        <img src="/images/image2.png" className="info-image"></img>
-        <div className="info-content">
+        <div className="info-content" style={{textIndent: '45px'}}>
           To date, there are no specific vaccines or medicines for COVID-19.
           Treatments are under investigation, and will be tested through
           clinical trials. World Health Organization.
-          <br />
           If you feel sick you should rest, drink plenty of fluid, and eat
           nutritious food. Stay in a separate room from other family members,
           and use a dedicated bathroom if possible. Clean and disinfect
           frequently touched surfaces.
         </div>
+        <img src="/images/image2.png" className="info-image" alt=""></img>
       </div>
       <div className="info-cards">
-        <img src="/images/image3.png" className="info-image"></img>
+        <img src="/images/image3.png" className="info-image" alt=""></img>
         <div className="info-content">
           To prevent the spread of COVID-19:
           <br />

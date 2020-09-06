@@ -1,5 +1,6 @@
 .info-cards {
   display: flex;
+  padding: 20px;
 }
 .info-image {
   width: 50%;

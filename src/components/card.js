@@ -9,7 +9,7 @@ const MediaCard = (props) => {
   return (
     <div className="sub-container">
       <div>
-        <img className="country-img" src={props.countryObj.countryInfo.flag} />
+        <img className="country-img" src={props.countryObj.countryInfo.flag} alt="" />
       </div>
       <div className="country-info">
         <div>Country : {props.countryObj.country}</div>
