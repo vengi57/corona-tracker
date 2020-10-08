@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import MediaCard from "./components/card";
 import CardOverview from "./components/cardOverview";
 import Variants from "./components/loader";
+import Example from "./components/chart";
+import TextField from "@material-ui/core/TextField";
 import "./App.css";
 
 const App = () => {
   const [coronaData, setdata] = useState([]);
   const [coronaDataWorld, setdataWorld] = useState([]);
+  const [chartData, setChartData] = useState([]);
   const loaderArr = [1, 2, 3, 4];
   const [searchedCountry, setCountry] = useState("");
   const getCoronaData = async () => {
@@ -23,6 +26,21 @@ const App = () => {
     );
     const data = await responce.json();
     setdataWorld(data);
+    getStructuredData(data);
+  };
+
+  const getStructuredData = (data) => {
+    let chartArr = [];
+    let arr = ["cases", "deaths", "recovered"];
+    Object.keys(data).map((val, key) => {
+      if (arr.includes(val)) {
+        let tempObj = {};
+        tempObj = { ...tempObj, name: val, [val]: data[val] };
+        chartArr.push(tempObj);
+      }
+    });
+
+    setChartData(chartArr);
   };
 
   useEffect(() => {
@@ -36,8 +54,6 @@ const App = () => {
       : item;
   });
 
-  console.log("coronaDataWorld", coronaDataWorld);
-
   return (
     <div className="root">
       <div className="title">
@@ -47,7 +63,7 @@ const App = () => {
       </div>
       <div className="info-cards">
         <img src="/images/image1.png" className="info-image" alt=""></img>
-        <div className="info-content" style={{textIndent: '45px'}}>
+        <div className="info-content" style={{ textIndent: "45px" }}>
           Coronavirus disease (COVID-19) is an infectious disease caused by a
           newly discovered coronavirus.Most people who fall sick with COVID-19
           will experience mild to moderate symptoms and recover without special
@@ -55,14 +71,13 @@ const App = () => {
         </div>
       </div>
       <div className="info-cards">
-        <div className="info-content" style={{textIndent: '45px'}}>
+        <div className="info-content" style={{ textIndent: "45px" }}>
           To date, there are no specific vaccines or medicines for COVID-19.
           Treatments are under investigation, and will be tested through
-          clinical trials. World Health Organization.
-          If you feel sick you should rest, drink plenty of fluid, and eat
-          nutritious food. Stay in a separate room from other family members,
-          and use a dedicated bathroom if possible. Clean and disinfect
-          frequently touched surfaces.
+          clinical trials. World Health Organization. If you feel sick you
+          should rest, drink plenty of fluid, and eat nutritious food. Stay in a
+          separate room from other family members, and use a dedicated bathroom
+          if possible. Clean and disinfect frequently touched surfaces.
         </div>
         <img src="/images/image2.png" className="info-image" alt=""></img>
       </div>
@@ -85,6 +100,9 @@ const App = () => {
       </div>
       <div>
         <div className="tracker-header">COVID-19 CORONAVIRUS PANDEMIC</div>
+        <div>
+          <Example data={chartData} />
+        </div>
         <CardOverview data={coronaDataWorld} />
       </div>
       <br />
