@@ -55,7 +55,7 @@
 }
 .title {
   display: flex;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   color: white;
   background-color: black;

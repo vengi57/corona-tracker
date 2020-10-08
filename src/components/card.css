@@ -57,10 +57,7 @@
   padding-right: 3%;
 }
 .bar-chart{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: inherit!important;
+ position: inherit!important;
 }
 .wrapper{
   display: flex;

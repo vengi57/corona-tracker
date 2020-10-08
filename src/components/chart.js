@@ -46,7 +46,7 @@ const Example = (props) => {
   return (
     <div className="wrapper">
       <BarChart
-        className="bar-chart"
+    //   className="bar-chart"
         width={700}
         height={300}
         data={props.data}
@@ -56,15 +56,11 @@ const Example = (props) => {
           left: 20,
           bottom: 5,
         }}
-        //   style={{
-        //      color:"red"
-        //   }}
       >
         {/* <CartesianGrid strokeDasharray="3 3" /> */}
-        <XAxis dataKey="name" />
-
-        {/* <YAxis /> */}
-        <Tooltip />
+        <XAxis dataKey="name"  />  
+        {/* <YAxis/> */}
+        <Tooltip/>
         <Legend />
 
         <Bar dataKey="cases" fill="#B1D0FD" />
